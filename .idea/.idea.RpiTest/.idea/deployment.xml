@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="rpi" createEmptyFolders="true" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="rpi">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../../../../Program Files/dotnet/sdk/6.0.202/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_6_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTest.sln" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/App.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/App.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Data/WeatherForecast.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Data/WeatherForecastService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/Counter.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/Counter.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/Error.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/Error.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/Error.cshtml.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/FetchData.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/FetchData.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/Index.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/Index.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/_Host.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/_Host.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/_Layout.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Pages/_Layout.cshtml" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Program.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Properties/launchSettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/RpiTestBlazor.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/MainLayout.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/MainLayout.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/MainLayout.razor.css" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/NavMenu.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/NavMenu.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/NavMenu.razor.css" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/SurveyPrompt.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/Shared/SurveyPrompt.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/_Imports.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/_Imports.razor" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/appsettings.Development.json" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/appsettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/obj/Debug/net6.0/RpiTestBlazor.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/obj/Debug/net6.0/RpiTestBlazor.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/obj/Debug/net6.0/RpiTestBlazor.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/obj/Debug/net6.0/RpiTestBlazor.RazorAssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/bootstrap/bootstrap.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/bootstrap/bootstrap.min.css.map" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/FONT-LICENSE" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/ICON-LICENSE" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/README.md" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.eot" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.otf" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/open-iconic/font/fonts/open-iconic.woff" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/css/site.css" web="/" />
+            <mapping local="$PROJECT_DIR$/RpiTestBlazor/wwwroot/favicon.ico" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

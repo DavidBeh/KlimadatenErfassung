@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            
+            "program": "~/RpiTestBlazor",
+            "args": [],
+            "cwd": "~/",
+            "stopAtEntry": false,
+            "launchBrowser": {
+                "enabled": true,
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start http://172.17.27.71:5000"
+                }
+            },
+            "pipeTransport": {
+                "pipeCwd": "${workspaceFolder}",
+                "pipeProgram": "${workspaceFolder}/plink.exe",
+                "pipeArgs": ["-pw", "pi", "pi@172.17.27.71"],
+                "debuggerPath": "~/vsdbg/vsdbg"
+            },
+            
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
