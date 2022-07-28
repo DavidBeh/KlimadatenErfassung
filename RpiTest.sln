@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpiTestBlazor", "RpiTestBla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHRunner", "SSHRunner\SSHRunner.csproj", "{F59476EB-8986-40F4-83DD-363468E562DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GN.Klima.Domain", "GN.Klima.Domain\GN.Klima.Domain.csproj", "{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{F59476EB-8986-40F4-83DD-363468E562DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F59476EB-8986-40F4-83DD-363468E562DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F59476EB-8986-40F4-83DD-363468E562DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -8,8 +8,7 @@
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
-            
-            "program": "~/RpiTestBlazor",
+            "program": "~/RpiTestBlazor.dll",
             "args": [],
             "cwd": "~/",
             "stopAtEntry": false,
@@ -17,14 +16,14 @@
                 "enabled": true,
                 "windows": {
                     "command": "cmd.exe",
-                    "args": "/C start http://172.17.27.71:5000"
+                    "args": "/C start http://klima.fritz.box:5000"
                 }
             },
             "pipeTransport": {
                 "pipeCwd": "${workspaceFolder}",
                 "pipeProgram": "${workspaceFolder}/plink.exe",
-                "pipeArgs": ["-pw", "pi", "pi@172.17.27.71"],
-                "debuggerPath": "~/vsdbg/vsdbg"
+                "pipeArgs": ["-pw", "debug", "dndebug@klima.fritz.box"],
+                "debuggerPath": "/usr/local/vsdbg/vsdbg"
             },
             
         },

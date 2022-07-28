@@ -1,5 +1,6 @@
 ﻿using System.Device.Gpio;
 using Iot.Device.DHTxx;
+using Iot.Device.OneWire;
 using UnitsNet;
 
 namespace RpiTestBlazor.Services;
@@ -7,10 +8,10 @@ namespace RpiTestBlazor.Services;
 public class DhtService : IHostedService
 {
     public List<double> Temps;
-    public Dht11 d;
+    public Dht11 sensor;
     public DhtService(ILogger<DhtService> l)
     {
-        d = new Dht11(11, PinNumberingScheme.Board);
+        sensor = new Dht11(11, PinNumberingScheme.Board);
     }
 
     public Task StartAsync(CancellationToken cancellationToken)
@@ -21,16 +22,15 @@ public class DhtService : IHostedService
             while (true)
             {
                 await Task.Delay(5000);
-                var successTemp = d.TryReadTemperature(out var temperature);
-                var successHum = d.TryReadHumidity(out var humidity);
+                var successTemp = sensor.TryReadTemperature(out var temperature);
+                var successHum = sensor.TryReadHumidity(out var humidity);
                 
                 
             }
         });
         return Task.CompletedTask;
     }
-
-    public event DhtRecord record;
+    
     
     public class DhtRecord
     {
@@ -38,7 +38,7 @@ public class DhtService : IHostedService
         public double? Humidity;
     }
     
-    public async Task StopAsync(CancellationToken cancellationToken)
+    public Task StopAsync(CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

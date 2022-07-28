@@ -3,7 +3,21 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="9e508496-7df0-4312-8ba3-abe53fbcd636" name="rpi" url="http://172.17.27.22">
-        <fileTransfer rootFolder="/home/pi" accessType="SFTP" host="172.17.27.71" port="22" sshConfigId="38f5910f-4943-4d39-bf56-98e8d4bb47ce" sshConfig="pi@172.17.27.71:22 password">
+        <fileTransfer rootFolder="/home/pi" accessType="SFTP" sshConfigId="38f5910f-4943-4d39-bf56-98e8d4bb47ce" sshConfig="pi@172.17.27.71:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="f9a85b9c-0142-4c2d-81dc-95444255981a" name="Klima Personal">
+        <fileTransfer rootFolder="/home/pi" accessType="SFTP" host="klima.fritz.box" port="22" sshConfigId="c066f070-0f9b-4e3a-806a-fc24904c4f37" sshConfig="dndebug@klima.fritz.box:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="7ec6feef-c010-45ac-9e17-dc683f25a02e" name="Klima Debug" url="">
+        <fileTransfer rootFolder="/home/dndebug" accessType="SFTP" host="klima.fritz.box" port="22" sshConfigId="c066f070-0f9b-4e3a-806a-fc24904c4f37" sshConfig="dndebug@klima.fritz.box:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

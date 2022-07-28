@@ -10,9 +10,10 @@
   "profiles": {
     "RpiTestBlazor": {
       "commandName": "Project",
+      "hotReloadEnabled": true,
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://*:7164;http://*:5164",
+      "applicationUrl": "https://172.0.0.1:5003",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

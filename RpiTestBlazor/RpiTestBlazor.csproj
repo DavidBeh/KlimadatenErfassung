@@ -5,13 +5,15 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RuntimeIdentifiers>linux-arm</RuntimeIdentifiers>
-        <MvcRazorCompileOnPublish Condition=" '$(RuntimeIdentifier)' != 'linux-arm' ">true</MvcRazorCompileOnPublish>
+<!--
+        <MvcRazorCompileOnPublish Condition=" '$(RuntimeIdentifiers)' != 'linux-arm' ">true</MvcRazorCompileOnPublish>
+-->
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Iot.Device.Bindings" Version="2.1.0" />
-      <PackageReference Include="linq2db.MySqlConnector" Version="4.1.1" />
-      <PackageReference Include="System.Device.Location.Portable" Version="1.0.0" />
+      <PackageReference Include="System.Text.Json" Version="7.0.0-preview.6.22324.4" />
     </ItemGroup>
+
 
 </Project>
