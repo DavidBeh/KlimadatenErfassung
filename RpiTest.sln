@@ -1,10 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpiTestBlazor", "RpiTestBlazor\RpiTestBlazor.csproj", "{C7C34568-4FFB-418A-9C2D-BB623B8C3108}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpiTestBlazor", "RpiTestBlazor\RpiTestBlazor.csproj", "{C7C34568-4FFB-418A-9C2D-BB623B8C3108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHRunner", "SSHRunner\SSHRunner.csproj", "{F59476EB-8986-40F4-83DD-363468E562DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSHRunner", "SSHRunner\SSHRunner.csproj", "{F59476EB-8986-40F4-83DD-363468E562DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GN.Klima.Domain", "GN.Klima.Domain\GN.Klima.Domain.csproj", "{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GN.Klima.Domain", "GN.Klima.Domain\GN.Klima.Domain.csproj", "{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomPlayground", "RandomPlayground\RandomPlayground.csproj", "{89D4A85B-2658-4F1C-AC00-FC320C82C00F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GN.Klima.IoT", "GN.Klima.IoT\GN.Klima.IoT.csproj", "{452B79C5-766F-4AD8-B233-FF5B6AC892D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +31,19 @@ Global
 		{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{186D28C9-46C5-4E76-AFF0-828E07E5F4B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D4A85B-2658-4F1C-AC00-FC320C82C00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D4A85B-2658-4F1C-AC00-FC320C82C00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D4A85B-2658-4F1C-AC00-FC320C82C00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D4A85B-2658-4F1C-AC00-FC320C82C00F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452B79C5-766F-4AD8-B233-FF5B6AC892D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452B79C5-766F-4AD8-B233-FF5B6AC892D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452B79C5-766F-4AD8-B233-FF5B6AC892D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452B79C5-766F-4AD8-B233-FF5B6AC892D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53D99BDF-3E71-45FD-9138-66409D5CCA33}
 	EndGlobalSection
 EndGlobal

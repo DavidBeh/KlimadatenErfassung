@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Connections;
 using Microsoft.Extensions.Configuration.CommandLine;
 using RpiTestBlazor.Data;
 using RpiTestBlazor.Services;
+using RpiTestBlazor.Services.Sensor;
 
-if (args.Contains("--attach-debugger") && !Debugger.IsAttached)
+
+if (args.Contains("--request-debugger") && !Debugger.IsAttached)
     Debugger.Launch();
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions()
@@ -16,11 +18,12 @@ var builder = WebApplication.CreateBuilder(new WebApplicationOptions()
     EnvironmentName = "Development"
 });
 
+
 builder.WebHost.ConfigureKestrel(options => { options.Listen(IPAddress.Parse("127.0.0.1"), 5003); });
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
+builder.Services.AddSingleton<SensorManagementService>();
 builder.Services.AddSingleton<WeatherForecastService>();
 //builder.Services.AddSingleton<DhtService>();
 //builder.Services.AddHostedService<DhtService>(provider => provider.GetRequiredService<DhtService>());
@@ -33,6 +36,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
 
 //app.UseHttpsRedirection();
 

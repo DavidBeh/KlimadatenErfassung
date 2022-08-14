@@ -1,0 +1,111 @@
+﻿@using RpiTestBlazor.Services.Sensor
+@using Microsoft.AspNetCore.SignalR
+@using System.Diagnostics.CodeAnalysis
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
+@using System.Reflection.Metadata.Ecma335
+@using System.Text.Json.Serialization
+@using Microsoft.AspNetCore.Mvc.ModelBinding
+@using System.ComponentModel
+
+
+<div>
+    @foreach (var prop in Properties)
+    {
+        var type = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
+        var isNullable = Nullable.GetUnderlyingType(prop.PropertyType) != null;
+        var display = prop.GetCustomAttribute<DisplayNameAttribute>()?.DisplayName ?? prop.PropertyType.Name;
+
+
+        var isValid = !_invalidMessages.TryGetValue(prop, out var invalidMessage);
+
+        var value = prop.GetValue(Model);
+
+
+        <label class="form-label mb-3">@display 
+        @if (type == typeof(string))
+        {
+            <input class="form-control" disabled="@(!AllowEdit)" type="text" value="@value" @oninput="(args) => HandleInputChange(prop, args)"/>
+        }
+        else if (type == typeof(int))
+        {
+            <input  class="form-control"  disabled="@(!AllowEdit)" type="number" value="@value" @oninput="(args) => HandleInputChange(prop, args)"/>
+        }
+        else if (type == typeof(bool))
+        {
+            <input class="form-check-input" disabled="@(!AllowEdit)" checked="@value" @onchange="(args) => HandleInputChange(prop, args)"/>
+        }
+
+        @if (AllowEdit && _invalidMessages.TryGetValue(prop, out var errorMessage) && errorMessage != null)
+        {
+            <div class="invalid-feedback d-block">@errorMessage</div>
+        }
+        </label>
+    }
+</div>
+
+
+@code {
+    private IDictionary<string, object> parameters = new Dictionary<string, object>();
+
+
+    [Parameter]
+    public SensorConnection Model { get; set; } = null!;
+
+    [Parameter]
+    public EventCallback<SensorConnection> ModelChanged { get; set; }
+
+    [Parameter]
+    public bool EditMode { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> EditChanged { get; set; }
+
+    public bool AllowEdit { get; set; } = true;
+
+
+    public Dictionary<PropertyInfo, object?> Values;
+
+    private List<PropertyInfo> Properties = null!;
+
+    private Dictionary<PropertyInfo, string?> _invalidMessages = new();
+    private Dictionary<PropertyInfo, object?> _rawInput = new();
+    private Dictionary<PropertyInfo, bool> _editedTable = new();
+
+    protected override void OnInitialized()
+    {
+        var edt = new EditContext(new object());
+        edt.Properties[new object()] = "";
+
+        if (Model == null) throw new ArgumentNullException(nameof(Model));
+        Properties = Model.GetType().GetProperties().Where(info => info.GetMethod != null && info.SetMethod != null).OrderBy(info => info.GetCustomAttribute<JsonPropertyOrderAttribute>(true)?.Order ?? 0).ToList();
+    }
+
+
+    private void HandleInputChange(PropertyInfo prop, ChangeEventArgs value)
+    {
+        _editedTable[prop] = true;
+        object? converted = null;
+        bool isInvalid = false;
+        try
+        {
+            converted = Convert.ChangeType(value.Value, prop.PropertyType);
+        }
+        catch (Exception e)
+        {
+            isInvalid = true;
+            _invalidMessages[prop] = "Invalid format";
+            InvokeAsync(StateHasChanged);
+            return;
+        }
+
+        _invalidMessages[prop] = null;
+
+        prop.SetValue(Model, converted);
+
+
+        InvokeAsync(StateHasChanged);
+    }
+
+}
+

@@ -1,0 +1,21 @@
+﻿@page "/sensors"
+@using RpiTestBlazor.Services.Sensor
+@inject SensorManagementService SensorManagementService;
+<h1>Sensors</h1>
+
+<button type="button" class="btn btn-primary d-flex">
+    <span class="material-symbols-outlined">add</span>
+    Hinzufügen
+</button>
+
+
+
+@code {
+
+    private List<SensorModel> LocalSensors { get; set; }
+
+    protected override void OnInitialized()
+    {
+    }
+
+}

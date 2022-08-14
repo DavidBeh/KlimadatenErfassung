@@ -1,16 +1,15 @@
 ﻿@page "/"
+@using RpiTestBlazor.Services.Sensor
 
 <PageTitle>Index</PageTitle>
 
 <h1>Hello, world!</h1>
-
-Welcome to your new app.
+Welcome to your new app!
 
 <SurveyPrompt Title="How is Blazor working for you?"/>
-<SensorListEntry></SensorListEntry>
-<SensorListEntry></SensorListEntry>
-<SensorListEntry></SensorListEntry>
-<SensorListEntry></SensorListEntry>
+<SensorListConnectionForm Model="new Aht20SensorConnection()"></SensorListConnectionForm>
+
+
 
 
 
